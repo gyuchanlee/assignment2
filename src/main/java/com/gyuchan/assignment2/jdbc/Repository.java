@@ -14,7 +14,6 @@ public class Repository {
     public void createTable() {
         Connection conn = null;
         PreparedStatement stmt = null;
-        String sql = "";
 
         // 0. if test 테이블 있으면 드랍하고 시작
         try {
@@ -46,9 +45,6 @@ public class Repository {
     public void insert(String name, int num) {
         Connection conn = null;
         PreparedStatement stmt = null;
-        String sql = "";
-
-
 
         // 2. 데이터 insert
         LOG.info("테이블 insert 시작");
@@ -70,7 +66,6 @@ public class Repository {
     public void update(String name, int num, int pk) {
         Connection conn = null;
         PreparedStatement stmt = null;
-        String sql = "";
 
         // 3. 데이터 update
         LOG.info("테이블 update 시작");
@@ -93,7 +88,6 @@ public class Repository {
     public void insertDuplicate(int pk, String name, int num) {
         Connection conn = null;
         PreparedStatement stmt = null;
-        String sql = "";
 
         // 4. 데이터 insert(PK 중복)
         LOG.info("테이블 insert (PK 중복) 시작");
